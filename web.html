@@ -206,15 +206,15 @@
         function closeNav() {
             var x = screen.width;
             document.getElementById("mySidenav").style.width = "0";
-            // if(x<=1200){
-            //     document.getElementById("navg").style.display="none";
+            if(x<=1200){
+                document.getElementById("navg").style.display="none";
                
-            // }
-            // else{
-            //     document.getElementById("navg").style.display="block";
-            //     document.getElementById("notify").style.width="24%";
-            // }
-            document.getElementById("notify").style.width="24%";
+            }
+            else{
+                document.getElementById("navg").style.display="block";
+                document.getElementById("notify").style.width="24%";
+            }
+//             document.getElementById("notify").style.width="24%";
         }
         function PopUp(){
             var v = document.getElementById("pop");
