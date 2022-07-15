@@ -1,0 +1,278 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <script src="register.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+</head>
+<body>
+    <i id="up"></i>
+    <div class="title" id="t">
+        <center>
+        <img src="admin.jpeg" width="40px" height="40px">
+        <span>Veera Durga</span>
+        <a href="#" onclick="Func();"><i class="fa fa-bars fa-2x" ></i></a>
+        </center>
+        
+    </div>
+    <nav id="navg">
+    <ul>
+        <li><a href="" onclick="HomePage();"><i class="fa fa-home fa-1x"></i> Home</a></li>
+        <li><a href="#"><i class='fa fa-book-reader'></i></i>Exam</a>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </li>
+        <li><a><i class="fa fa-wrench"></i> Branch</a>
+            <ul>
+                <li><a >CSE +</a>
+                    <ul>
+                        <li><a href="">Faculty</a></li>
+                        <li><a href="#" onclick="return PopUp();">Student</a></li>
+                    </ul>
+                </li>   
+                <li><a href="">ECE</a></li>
+                <li><a href="">Mech</a></li>
+            </ul>
+        </li>
+        <li><a onclick="ContactPage();"><i class="fa fa-phone"></i> Contact</a></li>
+    </ul> 
+    </nav>
+    <ul id="mySidenav" class="sidenav">
+        <li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="background-color:transparent;">&times;</a></li>
+        <li><a href="#" onclick="HomePage();"><i class="fa fa-home"></i></a></li>
+        <li><a href="#">Exam</a>
+            <ul class="exam" style="top:200px ;">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </li>
+        <li><a href="#" >Branch</a>
+            <ul style="top:220px">
+            <li>
+                <a href="">CSE +</a>
+                <ul>
+                <li><a href="">Faculty</a></li>
+                <li><a href="#" onclick="return PopUp();">Student</a></li>
+                </ul>
+            </li>
+            <li><a href="">ECE</a></li>
+            <li><a href="">MECH</a></li>
+            </ul>
+        </li>
+        <li><a  onclick="ContactPage();"><i class="fa fa-phone"></i></a></li>
+    </ul>
+    <div id="pop">
+        <a href="javascript:void(0)" class="closebtn" onclick="closepop()" style="background-color:transparent;text-decoration: none;font-size: 40px;">&times;</a>
+        <Label>Enter Student ID:</Label>    
+        <input type="text" id="entry" style="width:200px ;height:25px;font-size: large;font-weight: bold;"><br><br>
+        <input type="submit" name="" id=""value="Check" style="width: 70px;height: 25px;font-size:large;" onclick="Check();"><br><br>
+        <p style="font-size:30px ;font-weight: bold;" id="validornot"></p>
+    </div>
+    <div id="contact">
+        <table border="1">
+            <br>
+            <tr>
+                <td colspan="2"><img src="admin.jpeg" width="150px" height="150px" style="border-radius:100px ;margin-left:120px;margin-top:10px;margin-bottom: 10px;">
+                </td>
+            </tr>
+            <tr>
+                <th>Name:</th>
+                <td>Veera Durga</td>
+            </tr>
+            <tr>
+                <th>ID:</th>
+                <td>N180106</td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td>veeradurgaramoju@gmail.com</td>
+            </tr>
+            <tr>
+                <th rowspan="2">Ph No:</th>
+                <td>9618661633</td>
+            </tr>
+            <tr>
+                <td>8332012331</td>
+            </tr>
+            <tr>
+                <th>Country</th>
+                <td>India</td>
+            </tr>
+            <tr>
+                <th>Technologies:</th>
+                <td>HTML,CSS,Javascript,Python</td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td>IIIT Nuzvid,</td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>Mylavaram Road,
+                    </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>Krishna District,
+                    </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>Andhra pradesh,
+                    </td>
+            </tr>
+            <tr>
+                <th></th>
+                <td>521 202</td>
+            </tr>
+            <tr>
+                <th>Follow me:</th>
+                <td><a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                </td>
+            </tr>
+        </table>
+        <h2>Location:</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7639.355385710028!2d80.82005117249304!3d16.792703575097946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3675e5f312c661%3A0xab7189f421622491!2sIIIT%20Nuzvid%20Campus%2C%20Nuzividu%2C%20Andhra%20Pradesh%20521202!5e0!3m2!1sen!2sin!4v1657802676797!5m2!1sen!2sin"  height="470" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+    </div>
+    <div id="body">
+    <div class="left_navigation">
+        <Label style="font-size:20px ;font-weight:bold;">ID No:</Label>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for ID.." style="border-radius:10px;border:2px solid blue">
+        <i id="iclass_style" class="fa fa-search "></i>
+        <ul >
+            <li id="myUL"></li>
+        </ul>
+    </div>
+    <iframe src="imageslider.html" name="middle" height="500" id="image" name="m" frameborder="0"  class="image_slide"></iframe>
+    <iframe src="notification.html" frameborder="0" width="24%" height="500" id="notify" style="background-color:wheat;"class="notifi_slide"></iframe>
+    </div>
+    <div class="footer">
+        <div id="f">
+            <a  href="https://www.freecounterstat.com" title="free website counter"><img src="https://counter9.stat.ovh/private/freecounterstat.php?c=9he9n31xeybemgqy74eranxhyf6mfe2p" border="0" title="free website counter" alt="free website counter"></a>
+        </div>
+        <table>
+            <tr style="color:yellow;font-size: large;">
+                <th colspan="2">Contact:</th>
+            </tr>
+            <tr>
+                <td colspan="2"><hr><br></td>
+            </tr>
+            <tr>
+                <td>Name:</td>
+                <td>Veera Durga</td>
+            </tr>
+            <tr>
+                <td>ID:</td>
+                <td>N180106</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>N180106@rguktn.ac.in</td>
+            </tr>
+            <tr>
+                <td>Phone No:</td>
+                <td>9618661633</td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td>IIIT Nuzvid <br>RGUKT <br> Andhra Pradesh</td>
+            </tr>
+            <tr>
+                <td>Pin:</td>
+                <td>521202</td>
+            </tr>
+        </table>
+        <p>Copyright &copy;  2022,@ Veera Durga Ramoju</p>
+
+        <a href="#up" id="u"><img src="uparrow.png" width="50px" height="50px"></a>
+    </div>
+    <script>
+        function Func(){
+            document.getElementById("navg").style.display="none";
+            document.getElementById("mySidenav").style.width = "280px";
+            document.getElementById("notify").style.width="20%";
+            
+        }
+        function closeNav() {
+            var x = screen.width;
+            document.getElementById("mySidenav").style.width = "0";
+            // if(x<=1200){
+            //     document.getElementById("navg").style.display="none";
+               
+            // }
+            // else{
+            //     document.getElementById("navg").style.display="block";
+            //     document.getElementById("notify").style.width="24%";
+            // }
+            document.getElementById("notify").style.width="24%";
+        }
+        function PopUp(){
+            var v = document.getElementById("pop");
+            v.style.display="block";
+        }
+        function Check(){
+            var x = document.getElementById("entry").value;
+            if(/N+\d{6}/.test(x)){
+                document.getElementById("validornot").style.color="green";
+                document.getElementById("validornot").innerHTML="ID is Valid";
+            }
+            else{
+                document.getElementById("validornot").style.color="red";
+                document.getElementById("validornot").innerHTML="ID is InValid";
+            }
+        }
+        function closepop(){
+            document.getElementById("pop").style.display="none";
+            document.getElementById("validornot").innerHTML="";
+            document.getElementById("entry").value="";
+        }
+         function HomePage(){
+            document.getElementById("body").style.display="inline";
+            document.getElementById("contact").style.display="none";
+         }
+         function ContactPage(){
+            document.getElementById("body").style.display="none";
+            document.getElementById("contact").style.display="block";
+         }
+
+    </script> 
+     <script>
+        var data="";
+        var a = ["N180106","N180033","N180012","N180345","N180993","n180103"];
+    for(i=0;i<a.length;i++){
+        data=data+"<li><a href='#'>"+a[i]+"</a></li><br>"
+    }
+    document.getElementById("myUL").innerHTML = data;
+    </script>
+    <script>
+        function myFunction() {
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById('myInput');
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName('li');
+        
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "";
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        }
+        </script>
+
+</body>
+</html>

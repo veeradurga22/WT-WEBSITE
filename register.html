@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <center>
+    <div class="formdiv">
+        <form action="web.html" method="post" onsubmit=" return Submit()">
+            <center><h1 style="background-color: gray;color: white;">Register Form</h1></center>
+            <fieldset><legend><b>Name:</b> </legend>
+            <input id="first" type="text" placeholder="first name" onchange="return Check(this.id,'finput');" ><input id="middle" type="text" placeholder="middle name" onchange="return Check(this.id,'minput');" ><input id="last" type="text" placeholder="last name" onchange="return Check(this.id,'linput');"><br>
+            <span id="finput" style="color:red;margin-left:10px;visibility: hidden;font-family:'calibri';">*First Name should be Valid </span>
+            <span id="minput" style="color:red;margin-left:30;visibility: hidden;">*First Name should be Valid </span>
+            <span id="linput" style="color:red;margin-left:20;visibility: hidden;">*First Name should be Valid </span>
+            </fieldset><br>
+            <label>Full Name:</label><input id="fullname" style="width:80%" type="text" readonly onmousedown="Fn();"><br><br>
+            <label for="" >Select Country:</label>
+            <select id="country" style="margin-left:20px;width: 100px;border-radius: 5px;" onchange="Cntry(this.id);">
+                <option value="Select">Select</option>
+                <option value="USA">USA</option>
+                <option value="India">India</option>
+            </select>
+            <label style="margin-left:140px">Phone No:</label><input id="phno" type="text" onchange="Phone_Number()">
+            <span id="pherror1" style="margin-left:380px;color:red;display:none;">*Phone number should be in indian Format</span>
+            <span id="pherror2" style="margin-left:380px;color:red;display: none;">*Phone number should be in USA Format</span>
+            <span id="emptyph" style="margin-left:460px;color:red;display: none;">*Plz Enter Phone number</span>
+            <br>
+            <br>
+            <label>Password:</label>
+            <input type="password" id="password" onchange="return Passvalid();" placeholder="password" ><i style="margin-left:-25px;display:inline ;" id="eye" class="fa fa-eye" onclick="Show()"></i><i style="display:none;margin-left:-25px;" id="noeye" class="fa fa-eye-slash" onmouseup="Hide()"></i>
+            <label style="margin-left:30px ;">Retype Password:</label>
+            <input type="password" id="repassword" onchange="return Passvalid();" placeholder="retype password" onchange="return Repassword();"><i style="margin-left:-25px;display:inline ;" id="eye" class="fa fa-eye" onclick="Show()"></i><i style="display:none;margin-left:-25px;" id="noeye" class="fa fa-eye-slash" onmouseup="Hide()"></i>
+            <br><span  id="passerror" style="color:red;margin-left:85px;visibility: hidden;">*Invalid Password</span>
+            <span  id="repasserror" style="margin-left:250px;color:red;visibility: hidden;">*Password should match</span>
+            <br><br>
+            <fieldset>
+                <Legend>Hobbies:</Legend>
+                <input type="checkbox" class="check"><label>Music</label>
+                <input type="checkbox" class="check"><label>Reading Books</label>
+                <input type="checkbox" class="check"><label>Browsing Net</label>
+                <input type="checkbox" class="check"><label>Playing Games</label>
+                <input type="checkbox" class="check"><label>Others</label>
+            </fieldset>
+            <br>
+            <label>Upload Passport Size Photo:</label>
+            <input id="file" type="file" style="margin-left:20px;" onchange="Filevalidation();"><br><br>
+            <p id="size"></p>
+            <label>Email:<label>
+            <input style="width:250px" type="text" id="mail" onchange="return ValidateEmail();"  placeholder="email@gmail.com"  >
+            <label style="margin-left:10px">Date OF Birth:</label>  
+            <input type="date" name=""id="dateofbirth">
+            <span style="margin-left:10px" >Age:</span>
+            <span id="age"></span>
+            <input type="checkbox" title="Click on Check box to get age" name="" id="click" onselect="DateOfBirth();" >
+            <br>
+            <span id="mailerror" style="color:red;margin-left:70px;visibility: hidden;">*Plz Enter Valid Email</span>
+            <br><br><Label style="margin-top:5%;float:left" >Address:</Label>
+            <textarea style="margin-left:40px;" id="address" cols="20" rows="5" onkeyup="Address();"></textarea>
+            <textarea style="margin-left: 100px;" id="nonumaddress" cols="20" rows="5"></textarea><br><br>
+            <input style="margin-right:20px;width: 15px;height: 15px;" type="checkbox" id="accepted" onselect="return Accept();"><span>I accepted the terms and conditions stated above.</span>
+            <br><span style="margin-left:80px ;color:red;visibility: hidden;" id="taccept">*plz Accept terms and conditions to submit</span>
+            <br><br>
+            <input style="margin-left:100px;margin-top:20px;height:35px;width: 100px;font-family:'calibri';font-size: large;font-weight: bold;background-color: grey;color:black"  type="reset" onclick="return Confirm()">
+            <input style="float:right;margin-right: 120px;margin-top: 20px;height:35px;width: 100px;font-family:'calibri';font-size: large;font-weight: bold;background-color: blue;color:white" type="submit">          
+    </form> 
+    </div>
+</center>
+    <script src="register.js"></script>
+</body>
+</html>

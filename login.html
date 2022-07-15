@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Employee Management System</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            * {box-sizing: border-box;}
+
+body{
+    background-color:#333;
+}
+.login{
+    background-color: black;
+    width: 25%;
+    height: 70vh;
+    align-items: center; 
+    margin:auto;  
+    padding: 10px;  
+    color: white;   
+    font-family:'cambria';
+    font-size: medium;  
+    border: 1px solid red;
+    box-shadow: 5px 5px 10px red;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+} 
+.inputype{
+    background-color: black;
+    border:1px solid green;
+    color:white;
+    width: 70%;
+    height: 30px;
+    font-size:large;
+    font-family: 'Calibri';
+    border-radius: 5px;
+
+}
+.sub{
+    background-color: red;
+    color:white;
+    width: 50%;
+    height:10%;
+    font-size:large;
+    border-radius: 20px;
+}
+.sub:hover{
+    cursor: pointer;
+    animation:pulsate 1s ease-in-out;
+}
+@keyframes pulsate {
+    0%{
+        box-shadow: 0 0 10px #999,
+                    0 0 10px red;
+        
+    }
+    
+}
+        </style>
+    </head>
+    <body>
+        <center>
+        <h1 style="color:white">Login</h1>
+        <form action="web.html" method="post" onsubmit="return Login();">
+            <fieldset class="login">
+                <h2>Login</h2><br>
+                <div>
+                    <i class="fa fa-user" style="color:white ;" ></i>
+                    <input class="inputype" type="text" placeholder="Enter Username" id="user" >
+                </div><br><br>
+                <div>
+                    <i class="fa fa-key" style="color:white ;" ></i>
+                    <input class="inputype" type="password" placeholder="Enter Password" id="password" >
+                </div><br><br>
+                <input class="sub" type="submit" value="Login">
+            </fieldset>
+        </form> 
+
+        </center>
+        <script>
+            function Login(){
+                var u = document.getElementById("user").value;
+                var p = document.getElementById("password").value;
+                if(!(u=="veera" && p=="Veera123")){
+                    alert("Wrong logins")
+                    return false;
+                }
+                else{
+                    alert("Login Susessfully")
+                    return true;
+                }
+            }
+        </script>
+    </body>
+</html>
